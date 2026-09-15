@@ -1,0 +1,42 @@
+{% extends "base.njk" %}
+
+{% block content %}
+<section *ngIf=imageSrc class="default-header d-flex justify-content-center align-items-center">
+
+     <div class="container">
+        <div class="col-lg-10 col-12 mx-auto">
+            <h1>{{ title }}</h1>
+        </div>
+    </div>
+    {% if photoCredits %}
+    <div class="photo-credits"><p><b>Photo:</b> {{ photoCredits }}</p></div>
+    {% endif %}
+    <div class="image-slide">
+        {% if image %}
+        <img src="/assets/images/{{ image }}"/>
+        {% else %}
+        <img src="/assets/images/default.jpg"/>
+        {% endif %}
+    </div>
+    <div class="banner-icons d-none d-md-inline">
+        {% for logo in index.bannerLogos %}
+        <img src="/assets/images/{{ logo }}"/>
+        {% endfor %}
+    </div>
+    <div class="section-overlay"></div>
+</section>
+
+<section class="default-section content-section">
+    <div class="container">
+        <div class="row justify-content-center col-lg-10 mx-lg-auto">
+            {% block extended %}{% endblock %}
+            <div>
+            {{ content | safe }}
+            </div>
+        {% for button in buttons %}
+        <a class="btn me-2" href="{{ button.link }}" target="_blank">{{ button.text }}</a>
+        {% endfor %}
+        </div>
+    </div>
+</section>
+{% endblock %}

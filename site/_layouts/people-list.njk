@@ -1,0 +1,54 @@
+{% extends "page.njk" %}
+
+{% block extended %}
+<div class="people-section">
+{% for cat in people  %}
+    <h4><b>{{ cat.title }}</b></h4>
+
+    {% if cat.list | selectattr("imageUrl") | list | length > 0 %}
+    {# Display People in tiles with image #}
+
+    <div class="row">
+        {% for person in cat.list  %}
+        <div class="col-12 col-md-3 text-center tile mx-0 mx-md-3">
+
+            {% if person.link  %}
+            <a class="text-decoration-none" href="{{ person.link}}">
+            {% endif %}
+
+            <img
+                src="{{ person.imageUrl }}"
+                class="img-fluid rounded-circle people-img"
+                onerror="this.onerror=null; this.src='/assets/images/default-profile.jpg'"
+            />
+            <div>
+            <b>{{ person.name }}</b>
+            <p class="text-center">{{ person.affiliation }}</p>
+
+            {% if person.link  %}
+            </a>
+            {% endif %}
+
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+
+    {% else %}
+    {# Display as list #}
+
+    <ul>
+        {% for person in cat.list  %}
+        <li>
+            {% if person.link  %}
+            <a class="text-decoration-none" href="{{ person.link}}">{{ person.name }}&nbsp; ({{ person.affiliation }})</a>
+            {% else %}
+            {{ person.name }}&nbsp; ({{ person.affiliation }})
+            {% endif %}
+        </li>
+        {% endfor %}
+    </ul>
+    {% endif %}
+{% endfor %}
+</div>
+{% endblock %}

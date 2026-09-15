@@ -1,0 +1,54 @@
+{% extends "page.njk" %}
+
+{% block extended %}
+<div class="calls-section">
+
+<table class="table">
+    <thead>
+        <tr>
+        <th scope="col" class="w-33"></th>
+        <th scope="col" class="w-33">
+            {% if labels.first %} {{ labels.first }} {% endif %}
+        </th>
+        <th scope="col" class="w-33">
+            {% if labels.second %} {{ labels.second }} {% endif %}
+        </th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for deadline in deadlines %}
+        {% if deadline.first or deadline.second %}
+        <tr>
+        <th scope="row">{{ deadline.name }}</th>
+        <td>
+            {% if deadline.first.old %}
+            <s class="lighter-dark">{{ deadline.first.old }}</s></br>
+            {% endif %}
+            {% if deadline.first.old2 %}
+            <s class="lighter-dark">{{ deadline.first.old2 }}</s></br>
+            {% endif %}
+            {{ deadline.first.current or deadline.first }}
+        </td>
+        <td>
+            {% if deadline.second.old %}
+            <s class="lighter-dark">{{ deadline.second.old }}</s></br>
+            {% endif %}
+            {% if deadline.second.old2 %}
+            <s class="lighter-dark">{{ deadline.second.old2 }}</s></br>
+            {% endif %}
+            {{ deadline.second.current or deadline.second }}</td>
+        </td>
+        </tr>
+        {% endif %}
+        {% endfor %}
+        {% if not noConferenceDate %}
+        <tr>
+        <th scope="row">Conference Date</th>
+        <td colspan="2"><b>{{ index.conferenceDate }}, {{ index.conferenceYear }}</b></td>
+        {% endif %}
+        </tr>
+    </tbody>
+</table>
+</div>
+
+{% endblock %}

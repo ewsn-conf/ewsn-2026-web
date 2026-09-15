@@ -1,0 +1,87 @@
+
+<nav class="navbar navbar-expand-xl">
+    <div class="container d-inline-flex justify-content-between">
+        <div class="col-10 col-xl d-inline-flex">
+            <div class="me-3">
+                {% for logo in index.headerLogos %}
+                <img class="navbar-icon" src="/assets/images/{{ logo }}"/>
+                {% endfor %}
+            </div>
+
+            {% if index.headerLogos | length > 0 %}
+            <div class="d-none d-sm-flex col-xl col-lg-9 flex-wrap">
+            {% else %}
+            <div class="d-flex col-xl col-lg-9 flex-wrap">
+            {% endif %}
+                <a class="navbar-link me-2" href="/">EWSN {{ index.conferenceYear }}</a>
+                <p class=" me-3">{{ index.conferenceDate }}</p>
+            </div>
+        </div>
+
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="col-xl-auto col-10">
+            <div class="collapse navbar-collapse justify-content-between" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link nav-text" href="/">Home</a>
+                    </li>
+                    {% for item in nav %}
+                    {% if not item.hide %}
+                        {% set children = item.children or [] %}
+                        {% set children = children | rejectattr('hide', 'equalto', true) | list %}
+                        <li class="nav-item dropdown">
+                            {% if children | length > 1 or item.dropdownSingle%}
+                                <a class="nav-link nav-text">
+                                    {{ item.title }}
+                                    <i class="bi-chevron-down ms-1"></i>
+                                </a>
+                                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                    {% for child in children  %}
+                                        {% if child.isExternal %}
+                                            {% set childPath = child.path %}
+                                        {% elseif child.path == item.path %}
+                                            {% set childPath = "/" + item.path %}
+                                        {% else %}
+                                            {% set childPath = "/" + item.path + "/" + child.path %}
+                                        {% endif %}
+                                        <a class="dropdown-item" href="{{ childPath }}">{{ child.title  }}
+                                            {% if child.isExternal %}
+                                            <i class="bi-arrow-up-right ms-1"></i>
+                                            {% endif %}
+                                        </a>
+                                    {% endfor %}
+                                </ul>
+                            {% else %}
+                                {% set path = item.path %}
+                                {% set isExternal = item.isExternal %}
+
+                                {% if children | length == 1 %}
+                                    {% if children[0].isExternal %}
+                                        {% set path = children[0].path %}
+                                        {% set isExternal = true %}
+                                    {% elseif not children[0].path == item.path %}
+                                        {% set path = path + "/" + children[0].path %}
+                                    {% endif %}
+                                {% endif %}
+
+                                {% if not isExternal %}
+                                    {% set path = "/" + path %}
+                                {% endif %}
+
+                                <a class="nav-link nav-text" href="{{ path }}">{{ item.title }}
+                                    {% if isExternal %}
+                                    <i class="bi-arrow-up-right ms-1"></i>
+                                    {% endif %}
+                                </a>
+                            {% endif %}
+                        </li>
+                    {% endif %}
+                    {% endfor %}
+                </ul>
+            </div>
+        </div>
+    </div>
+</nav>

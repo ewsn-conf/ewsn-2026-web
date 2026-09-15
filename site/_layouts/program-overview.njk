@@ -1,0 +1,89 @@
+{% extends "page.njk" %}
+
+{% block extended %}
+<div class="program-overview-section col-lg-12 col-12">
+
+    <div class="program-overview d-flex flex-row flex-wrap flex-md-nowrap">
+        <div class="d-none d-md-inline">
+            <div class="header">
+                <p>Time</p>
+                </div>
+            <div class="session hour hour-half">
+            <p>8:30</p>
+            </div>
+            {% for i in range(9, 20) %}
+                <div class="session hour hour-full">
+                <p>{{ i }}</p>
+                </div>
+            {% endfor %}
+            <div class="session hour hour-half">
+            <p>20</p>
+            </div>
+        </div>
+        {% for day in program %}
+            <div class="program-day d-flex w-100 flex-nowrap py-3 py-md-0">
+
+                <div class="d-md-none">
+                     <div class="header">
+                    <p>Time</p>
+                    </div>
+                    <div class="session hour hour-half">
+                    <p>8:30</p>
+                    </div>
+                    {% for i in range(9, 20) %}
+                        <div class="session hour hour-full">
+                        <p>{{ i }}</p>
+                        </div>
+                    {% endfor %}
+                    <div class="session hour hour-half">
+                    <p>20</p>
+                    </div>
+                </div>
+
+                <div class="flex-column d-flex flex-grow-1">
+                    <div class="header">
+                        <p>{{ day.date}}</p>
+                    </div>
+                    {% for session in day.sessions  %}
+                        {% set duration = session.duration * 0.05 %}
+                        {% if duration > 0 %}
+                            {% if session.parallel %}
+                            <div class="session type-{{session.type}} text-center dur-{{duration}}" style="height: {{duration}}em">
+                                    <div class="row slots align-items-start">
+                                    {% for slot in session.slots %}
+                                    <div class="slot col">
+                                        {% if slot.offset %}
+                                        {% set offset = slot.offset * 0.05 %}
+                                        <div style="height: {{offset}}em"></div>
+                                        {% endif %}
+
+                                        {% if slot.time %}
+                                        {% set time = slot.time %}
+                                        {% else %}
+                                        {% set time = session.time %}
+                                        {% endif %}
+
+                                        {% set slotDuration = slot.duration * 0.05 %}
+                                        <div class="slot-active type-{{slot.type}} dur-{{slotDuration}}" style="height: {{slotDuration}}em" data-toggle="tooltip" data-placement="bottom" title="{{time}}">
+                                            <p>{{ slot.name}}</p>
+                                        </div>
+                                    </div>
+
+                                    {% endfor %}
+                                    </div>
+                            {% else %}
+                            <div class="session type-{{session.type}} text-center dur-{{duration}}" style="height: {{duration}}em" data-toggle="tooltip" data-placement="bottom" title="{{session.time}}">
+                                <p>{{ session.name}}</p>
+                                {% endif %}
+                            </div>
+                        {% else %}
+                            <div class="session type-{{session.type}} text-center flex-grow-1" data-toggle="tooltip" data-placement="bottom" title="{{session.time}}">
+                                <p>{{ session.name}}</p>
+                            </div>
+                        {% endif %}
+                    {% endfor %}
+                </div>
+            </div>
+        {% endfor %}
+    </div>
+{% endblock %}

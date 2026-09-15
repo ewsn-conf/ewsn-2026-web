@@ -1,0 +1,26 @@
+{% extends "page.njk" %}
+
+{% block extended %}
+<div class="papers-section">
+{% for paper in papers  %}
+    <div class="papers-tile tile">
+        <h5>{{ paper.title }}</h5>
+        <div>
+            {% set lastAffil = paper.authors[0].affiliation %}
+            {% for author in paper.authors  %}
+                {% if author != paper.authors[0] %}
+                    {% if lastAffil != author.affiliation %}
+                        <span class="light"> ({{ lastAffil }}); </span>
+                    {% else %}
+                        <span>, </span>
+                    {% endif %}
+                {% endif %}
+                <span class="light">{{ author.name }}</span>
+                {% set lastAffil = author.affiliation %}
+            {% endfor %}
+            <span class="light">({{lastAffil}}) </span>
+        </div>
+    </div>
+{% endfor %}
+</div>
+{% endblock %}

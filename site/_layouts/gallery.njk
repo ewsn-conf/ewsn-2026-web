@@ -1,0 +1,47 @@
+{% extends "page.njk" %}
+
+{% block extended %}
+<div>
+{{ content | safe }}
+</div>
+
+<div class="images-section col-lg-10 col-12">
+{% for section in sections %}
+    {% if section.title  %}
+    <h2>{{ section.title }}</h2>
+    {% endif  %}
+    {% if section.description  %}
+    <p>{{ section.description }}</p>
+    {% endif  %}
+
+    {% if section.carousel  %}
+    <div id="carouselControls{{loop.index}}" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+            {% for item in section.carousel %}
+            <div class="col-12 carousel-item {% if loop.first %}active{% endif %}">
+                {% if item.image  %}
+                <div class="carousel-caption">
+                    <h2><a href="{{ item.link }}">{{ item.label }}</a></h2>
+                </div>
+                <img src="/assets/images/{{ item.image }}" class="d-block w-100">
+                <div class="photo-credits"><p><b>Photo:</b> {{ item.photoCredits }}</p></div>
+                {% elseif item.video  %}
+                 <iframe class="d-block" src="{{ item.video }}"> </iframe>
+                {% endif  %}
+            </div>
+            {% endfor %}
+        </div>
+
+        {% if section.carousel | length > 1 %}
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselControls{{loop.index}}" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselControls{{loop.index}}" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        </button>
+        {% endif %}
+    </div>
+    {% endif %}
+{% endfor %}
+</div>
+{% endblock %}

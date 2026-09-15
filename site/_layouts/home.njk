@@ -1,0 +1,96 @@
+{% extends "base.njk" %}
+
+{% block content %}
+
+<section class="title-section d-flex justify-content-center align-items-center">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-12 mx-auto row justify-content-center">
+                <em class="small-text">{{ index.conferenceDate }}</em>
+                <h1> EWSN {{ index.conferenceYear }}</h1>
+                <h5 class="col-10 col-sm-7 col-xl-3 col-lg-4 col-md-4  light">{{ description }}</h5>
+            </div>
+        </div>
+    </div>
+    <div class="title-slide">
+        <img src="assets/images/{{ image }}"/>
+        <div class="banner-icons d-flex-wrap">
+            {% for logo in index.bannerLogos %}
+            <img class="col-6 col-md" src="/assets/images/{{ logo }}"/>
+            {% endfor %}
+        </div>
+        {% if photoCredits %}
+        <div class="photo-credits"><p><b>Photo:</b> {{ photoCredits }}</p></div>
+        {% endif %}
+    </div>
+</section>
+
+
+<section class="about-section content-section background-primary">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-lg-6 col-12">
+                <em>About</em>
+                <div>
+                {{ content | safe }}
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<section class="content-section home-section">
+    <div class="container">
+    <div class="row justify-content-center">
+        <div class="news-section col-lg-6 col-12 ">
+            <h3>Latest News</h3>
+                {%- for item in collections.news.reverse().slice(0, 8) -%}
+                {% if not item.data.hide %}
+                <div class="tile">
+                    {{ item.content | safe }}
+                </div>
+                {% endif %}
+                {%- endfor -%}
+        </div>
+        <div class="dates-section col-lg-6 col-12 text-center">
+            <h3>Important Dates</h3>
+            <div class="timeline">
+            {% set dates = collections.paperDates[0] %}
+            {% for item in dates.data.deadlines  %}
+                <div class="timeline-container">
+                    <div class="timeline-content dates-block-info strong row">
+                        <h5 class="mb-1">{{ item.name }}</h5>
+                        <div class="timeline-dates">
+                            <div class="row"><b class="col-3">{{ dates.data.labels.first }}: </b>
+                                <div class="ms-2 col">
+                                    {% if item.first.old %}
+                                    <s  class="lighter-dark">{{ item.first.old }}</s></br>
+                                    {% endif %}
+                                    {{ item.first.current or item.first }}</td>
+                                </div>
+                            </div>
+                            <div class="row"><b class="col-3">{{ dates.data.labels.second }}:</b>
+                                <div class="ms-2 col">
+                                    {% if item.second.old %}
+                                    <s class="lighter-dark">{{ item.second.old }}<br/></s>
+                                    {% endif %}
+                                    {{ item.second.current or item.second }}<br/>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            {% endfor %}
+            <div class="timeline-container">
+                <div class="timeline-content dates-block-info strong">
+                    <h5 class="mb-0">Conference Date</h5>
+                    {{ index.conferenceDate }}, {{ index.conferenceYear }}
+                </div>
+            </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+{% endblock %}

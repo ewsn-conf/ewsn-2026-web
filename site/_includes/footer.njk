@@ -1,0 +1,28 @@
+<footer class="site-footer">
+    <div class="container">
+        <div class="row">
+            <div class="col-12 col-md d-lg-flex align-items-center">
+                {% for logo in index.footerLogos %}
+                <img class="icon align-middle" src="/assets/images/{{ logo }}"/>
+                {% endfor %}
+            </div>
+            <div class="line d-none d-md-inline">
+            </div>
+            {% if index.footerSupporters | length > 0 %}
+            <div class="col-12 col-md col-xl-4 supporters ps-4">
+                <p>Supporters</p>
+                <div class="row">
+                {% for logo in index.footerSupporters %}
+                <div class="col">
+                    <img class="icon supporters" src="/assets/images/{{ logo }}"/>
+                </div>
+                {% endfor %}
+                </div>
+            </div>
+            {% endif %}
+            <div class="col-12 col-xl-1 d-flex align-items-end justify-content-end pe-0 pt-3">
+                <p>Copyright © EWSN {{ index.conferenceYear }}</p>
+            </div>
+        </div>
+    </div>
+</footer>

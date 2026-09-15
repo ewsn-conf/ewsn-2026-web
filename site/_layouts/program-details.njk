@@ -1,0 +1,78 @@
+{% extends "page.njk" %}
+
+{% block extended %}
+<div class="program-section">
+
+    {% for day in program %}
+        <div class="session">
+            <div class="date d-flex ">
+                <p>{{ day.date }}</p>
+            </div>
+            <div>
+                <ul>
+                {% for session in day.sessions  %}
+                    <div class="session row">
+                        <span class="time col-xl-2 col-md-3 col-sm-4 col-12">{{ session.time }}</span>
+                        <div class="col-xl-10 col-md-9 col-sm-8 col-12">
+                            <b>{{ session.name}}</b>
+                            {% if session.chair %}
+                            </br><span class="light">Chair: {{ session.chair }}</span>
+                            {% endif %}
+                        {% if session.slots %}
+                        <ul class="slots">
+                        {% for slot in session.slots  %}
+
+                            {% if slot.link %}
+                            <a href="{{ slot.link }}">
+                            {% endif %}
+                            <li>
+
+                            <span>{{ slot.name }}</span>
+
+                            {% if slot.time %}
+                            <span class="light">  ({{ slot.time }})</span>
+                            {% endif %}
+
+                            {% if slot.authors %}
+                            <div class="lighter-dark">
+                            {% set lastAffil = slot.authors[0].affiliation %}
+                            {% for author in slot.authors  %}
+                                {% if author != slot.authors[0] %}
+                                    {% if lastAffil != author.affiliation %}
+                                        <span class="light"> ({{ lastAffil }}); </span>
+                                    {% else %}
+                                        <span>, </span>
+                                    {% endif %}
+                                {% endif %}
+                                <span class="">
+                                    {% if author.isPresenter%}
+                                    <b>
+                                    {% endif %}
+                                    {{ author.name }}
+                                    {% if author.isPresenter%}
+                                    </b>
+                                    {% endif %}
+                                </span>
+                                {% set lastAffil = author.affiliation %}
+                            {% endfor %}
+                            <span class="light">({{lastAffil}}) </span>
+                            </div>
+                            {% endif %}
+                            </li>
+
+                            {% if slot.link %}
+                            </a>
+                            {% endif %}
+
+                        {% endfor %}
+                        </ul>
+                        {% endif %}
+                        </div>
+                    </div>
+                {% endfor %}
+                </ul>
+            </div>
+        </div>
+    {% endfor %}
+    </div>
+{% endblock %}
