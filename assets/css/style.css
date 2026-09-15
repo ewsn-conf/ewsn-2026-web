@@ -1,0 +1,10 @@
+@import 'bootstrap-icons.css';
+@import 'custom.css';
+
+/* Adjust theme */
+:root {
+  --dark-color: #14171f;
+  --primary-color:             #202737;
+  --secondary-color:                #ba8149;
+}
+
