@@ -39,6 +39,16 @@ Then turn left and walk up Helmholtzstraße.
 Just before the Alte Mensa, turn left onto Mommsenstraße and then right onto Dülferstraße.
 The entrance to the Alte Mensa and Dülfer Hall will be on your right.
 
+<img src="/assets/images/ewsn-tud-locations.jpg" alt="Map" class="venue-img"/>
+<img src="/assets/images/ewsn-tud-locations-zoom.jpg" alt="Zoomed Map" class="venue-img"/>
+
+### Conference Banquet
+
+The conference banquet will take place at the [Lingnerschloss](https://maps.app.goo.gl/MAhZj8cHjwaTwzEL8).
+The Lingerschloss is one of Dresden's three Elbe Castles, located directly on the banks of the Elbe River.
+The address is Bautzner Str. 132, 01099 Dresden.
+There will be a guided tour from the conference venue (Dülfer Hall) to the Lingnerschloss via public transport.
+
 ### How to reach the Venue
 
 #### By Train
@@ -57,7 +67,7 @@ Dresden is connected via its own airport, [Dresden International DRS](https://ww
 Alternatively, you can fly to [Berlin Brandenburg Airport BER](https://ber.berlin-airport.de/en.html) and then take a [train](https://int.bahn.de/en).
 A train from BER to Dresden Hauptbahnhof needs ~90 minutes.
 
-## Where to stay
+### Where to stay
 
 Around the [central station](https://maps.app.goo.gl/R1msfb9QUd58AJDq6) there are several options, from pricy up to mid-budget options.
 From the central station, you can easily reach both venues by tram, as described above.

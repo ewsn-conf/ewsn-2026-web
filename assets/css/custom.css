@@ -695,6 +695,20 @@ section {
   color: var(--bg-color) !important;
 }
 
+.venue-img {
+  max-width: 100%;
+  min-width: 50%;
+  width: 25em;
+  margin: 2em auto;
+  display: block;
+}
+
+@media screen and (min-width: 80em) {
+  .default-section .venue-img {
+    float: left
+  }
+}
+
 .speaker-img {
   width: 12em;
   height: 12em;
