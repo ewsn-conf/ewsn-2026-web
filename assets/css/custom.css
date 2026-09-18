@@ -766,6 +766,10 @@ section {
   Papers Section
 -----------------------------------------*/
 
+.papers-section a {
+  text-decoration: none;
+}
+
 .papers-tile {
   margin-bottom: 2em;
 }
@@ -789,16 +793,15 @@ section {
 .program-section .date {
   background-color: var(--primary-color);
   color: var(--bg-color);
-  height: 3em;
+  min-height: 3em;
   border-radius: var(--border-radius-small);
   margin-bottom: 1em;
 }
 
 .program-section .date p {
   font-weight: bold;
-  margin-top: auto;
-  margin-bottom: auto;
-  margin-left: 2em;
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
 }
 
 .program-section .session {
@@ -809,10 +812,6 @@ section {
 .program-section .slots {
   margin-bottom: 0.5em;
   margin-top: 0.5em;
-}
-
-.program-section a {
-  text-decoration: none;
 }
 
 /*---------------------------------------
@@ -827,6 +826,18 @@ section {
   font-size: 0.75em;
   margin: auto;
   font-weight: bold;
+}
+
+.program-overview a {
+  text-decoration: none;
+}
+
+.program-overview a:hover {
+  color: inherit !important;
+}
+
+.program-overview .program-link {
+  height: 100%;
 }
 
 .program-overview .header {

@@ -4,70 +4,110 @@
 <div class="program-section">
 
     {% for day in program %}
-        <div class="session">
-            <div class="date d-flex ">
-                <p>{{ day.date }}</p>
+        <div class="session" id="{{ day.key }}">
+            <div class="date d-flex flex-row align-items-center justify-content-between">
+                <p class="flex-grow ms-3">{{ day.date }}</p>
+                {% if day.venue %}
+                <a href="/venue" class="me-3" target="_blank">{{day.venue}}</a>
+                {% endif %}
             </div>
             <div>
                 <ul>
                 {% for session in day.sessions  %}
                     <div class="session row">
-                        <span class="time col-xl-2 col-md-3 col-sm-4 col-12">{{ session.time }}</span>
-                        <div class="col-xl-10 col-md-9 col-sm-8 col-12">
+                        <span class="time col-xl-2 col-sm-3 col-12">{{ session.time }}</span>
+                        <div class="col">
+
+                            {% if session.link %}
+                            <a href="{{ session.link }}">
+                            {% endif %}
+
                             <b>{{ session.name}}</b>
+
                             {% if session.chair %}
                             </br><span class="light">Chair: {{ session.chair }}</span>
                             {% endif %}
-                        {% if session.slots %}
-                        <ul class="slots">
-                        {% for slot in session.slots  %}
 
-                            {% if slot.link %}
-                            <a href="{{ slot.link }}">
-                            {% endif %}
-                            <li>
 
-                            <span>{{ slot.name }}</span>
-
-                            {% if slot.time %}
-                            <span class="light">  ({{ slot.time }})</span>
-                            {% endif %}
-
-                            {% if slot.authors %}
-                            <div class="lighter-dark">
-                            {% set lastAffil = slot.authors[0].affiliation %}
-                            {% for author in slot.authors  %}
-                                {% if author != slot.authors[0] %}
-                                    {% if lastAffil != author.affiliation %}
-                                        <span class="light"> ({{ lastAffil }}); </span>
-                                    {% else %}
-                                        <span>, </span>
-                                    {% endif %}
-                                {% endif %}
-                                <span class="">
-                                    {% if author.isPresenter%}
-                                    <b>
-                                    {% endif %}
-                                    {{ author.name }}
-                                    {% if author.isPresenter%}
-                                    </b>
-                                    {% endif %}
-                                </span>
-                                {% set lastAffil = author.affiliation %}
-                            {% endfor %}
-                            <span class="light">({{lastAffil}}) </span>
-                            </div>
-                            {% endif %}
-                            </li>
-
-                            {% if slot.link %}
+                            {% if session.link %}
                             </a>
                             {% endif %}
 
-                        {% endfor %}
-                        </ul>
-                        {% endif %}
+                            {% if session.slots %}
+                            <ul class="slots">
+                            {% for slot in session.slots  %}
+
+                                <li>
+                                <div class="row">
+                                <div class="col">
+
+                                {% if slot.link %}
+                                <a href="{{ slot.link }}">
+                                {% endif %}
+
+                                {% if slot.doi %}
+                                <a href="{{ slot.doi }}" class="text-decoration-none" target="_blank">
+                                {% endif %}
+
+                                    <span>{{ slot.name }}</span>
+                                    {% if slot.pdf %}
+                                    [<a href="{{ slot.pdf }}" target="_blank">PDF</a>]
+                                    {% endif %}
+
+                                    {% if slot.time %}
+                                    <span class="light">({{ slot.time }})</span>
+                                    {% endif %}
+
+                                    {% if slot.authors %}
+                                    <div class="lighter-dark">
+                                    {% set lastAffil = slot.authors[0].affiliation %}
+                                    {% for author in slot.authors  %}
+                                        {% if author != slot.authors[0] %}
+                                            {% if lastAffil != author.affiliation %}
+                                                <span class="light"> ({{ lastAffil }}); </span>
+                                            {% else %}
+                                                <span>, </span>
+                                            {% endif %}
+                                        {% endif %}
+                                        <span class="">
+                                            {% if author.isPresenter%}
+                                            <b>
+                                            {% endif %}
+                                            {{ author.name }}
+                                            {% if author.isPresenter%}
+                                            </b>
+                                            {% endif %}
+                                        </span>
+                                        {% set lastAffil = author.affiliation %}
+                                    {% endfor %}
+                                    <span class="light">({{lastAffil}}) </span>
+                                    </div>
+                                {% endif %}
+
+                                {% if slot.link or slot.doi%}
+                                </a>
+                                {% endif %}
+                                </div>
+
+                                {% if slot.room %}
+                                <div class="col-12 col-sm-4 col-md-3 order-1 order-md-12 light d-flex">
+                                    <a href="{{slot.roomLink}}"  target="_blank" class="ms-0 ms-md-auto">{{slot.room}}</a>
+                                </div>
+                                {% endif %}
+
+                                </div>
+                                </li>
+
+                            {% endfor %}
+                            </ul>
+                            {% endif %}
                         </div>
+                        {% if session.room %}
+                        <div class="col-12 col-sm-4 col-md-3 order-1 order-md-12 light d-flex">
+                            <a href="{{session.roomLink}}"  target="_blank" class="ms-0 ms-md-auto">{{session.room}}</a>
+                        </div>
+                        {% endif %}
+
                     </div>
                 {% endfor %}
                 </ul>

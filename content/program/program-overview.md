@@ -6,6 +6,7 @@ photoCredits: "Frank Exß (DML-BY) "
 
 program:
   - date: "Wednesday, September 16"
+    key: "day1"
     sessions:
       - time: "08:30–09:00"
         name: "Registration"
@@ -20,10 +21,10 @@ program:
           - name: "CrystalFreeIoT"
             duration: 75.0
             type: "workshop"
-          - name: "EMERGE"
+          - name: "NeuroPHY"
             duration: 75.0
             type: "workshop"
-          - name: "NeuroPHY"
+          - name: "EMERGE"
             duration: 75.0
             type: "workshop"
           - name: 'XR Wearables'
@@ -44,10 +45,10 @@ program:
           - name: "CrystalFreeIoT"
             duration: 90.0
             type: "workshop"
-          - name: "EMERGE"
+          - name: "NeuroPHY"
             duration: 90.0
             type: "workshop"
-          - name: "NeuroPHY"
+          - name: "EMERGE"
             duration: 90.0
             type: "workshop"
           - name: 'XR Wearables'
@@ -113,6 +114,7 @@ program:
         duration: 0
         type: "social"
   - date: "Thursday, September 17"
+    key: "day2"
     sessions:
       - time: "08:30–09:00"
         name: "Registration"
@@ -155,6 +157,7 @@ program:
         duration: 0
         type: "social"
   - date: "Friday, September 18"
+    key: "day3"
     sessions:
       - time: "08:30–09:00"
         name: "Registration"

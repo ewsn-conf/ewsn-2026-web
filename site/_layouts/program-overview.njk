@@ -22,7 +22,6 @@
         </div>
         {% for day in program %}
             <div class="program-day d-flex w-100 flex-nowrap py-3 py-md-0">
-
                 <div class="d-md-none">
                      <div class="header">
                     <p>Time</p>
@@ -40,7 +39,8 @@
                     </div>
                 </div>
 
-                <div class="flex-column d-flex flex-grow-1">
+                <div class="flex-grow-1">
+                    <a href="/program/detailed-program#{{ day.key }}" class="program-link flex-column d-flex ">
                     <div class="header">
                         <p>{{ day.date}}</p>
                     </div>
@@ -82,6 +82,7 @@
                             </div>
                         {% endif %}
                     {% endfor %}
+                </a>
                 </div>
             </div>
         {% endfor %}
