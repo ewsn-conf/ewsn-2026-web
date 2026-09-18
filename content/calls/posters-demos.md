@@ -40,7 +40,7 @@ EWSN 2026 invites poster and demo submissions. Topics of interest include but ar
 
 **On-site poster and demo session process.** The organization of the poster and demo session during the conference embraces two major aspects:
 - One-minute madness: The poster and demo displays will be preceded by a quick introductory session. This is intended to pitch your poster/demo and intrigue the audience to visit your stand. The organizers will contact the accepted poster and demo authors before the event to organize this session.
-- Presentation: Authors of accepted posters will be asked to bring their printed poster to the conference. The display of posters and demos is restricted to the dedicated session.
+- Presentation: Authors of accepted posters will be asked to bring their printed poster to the conference. The posters can be displayed throughout the entire conference, in addition to a dedicated in-person poster and demo session.
 
 **Submission portal.** Posters and demo abstracts are submitted using HotCRP on <https://hotcrp.netd.cs.tu-dresden.de/ewsn26-posters-demos/>.
 
