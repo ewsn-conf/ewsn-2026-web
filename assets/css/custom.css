@@ -37,6 +37,7 @@ https://www.tooplate.com/view/2137-barista-cafe
 body {
   font-family: var(--body-font-family);
   overscroll-behavior: none;
+  print-color-adjust: exact;
 }
 
 body p, body a  {
@@ -121,7 +122,8 @@ a, p, ul li, em, table,
   color: unset;
 }
 
-a:hover {
+a:hover,
+a:focus {
   color: var(--secondary-color) !important;
 }
 
@@ -154,7 +156,7 @@ section {
 }
 
 .text-decoration-none {
-  text-decoration: none;
+  text-decoration: none !important;
 }
 
 .container {
@@ -695,6 +697,20 @@ section {
   color: var(--bg-color) !important;
 }
 
+.venue-img {
+  max-width: 100%;
+  min-width: 50%;
+  width: 25em;
+  margin: 2em auto;
+  display: block;
+}
+
+@media screen and (min-width: 80em) {
+  .default-section .venue-img {
+    float: left
+  }
+}
+
 .speaker-img {
   width: 12em;
   height: 12em;
@@ -752,6 +768,10 @@ section {
   Papers Section
 -----------------------------------------*/
 
+.papers-section a {
+  text-decoration: none;
+}
+
 .papers-tile {
   margin-bottom: 2em;
 }
@@ -775,16 +795,15 @@ section {
 .program-section .date {
   background-color: var(--primary-color);
   color: var(--bg-color);
-  height: 3em;
+  min-height: 3em;
   border-radius: var(--border-radius-small);
   margin-bottom: 1em;
 }
 
 .program-section .date p {
   font-weight: bold;
-  margin-top: auto;
-  margin-bottom: auto;
-  margin-left: 2em;
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
 }
 
 .program-section .session {
@@ -795,10 +814,6 @@ section {
 .program-section .slots {
   margin-bottom: 0.5em;
   margin-top: 0.5em;
-}
-
-.program-section a {
-  text-decoration: none;
 }
 
 /*---------------------------------------
@@ -813,6 +828,18 @@ section {
   font-size: 0.75em;
   margin: auto;
   font-weight: bold;
+}
+
+.program-overview a {
+  text-decoration: none;
+}
+
+.program-overview a:hover {
+  color: inherit !important;
+}
+
+.program-overview .program-link {
+  height: 100%;
 }
 
 .program-overview .header {
