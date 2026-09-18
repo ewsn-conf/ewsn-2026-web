@@ -3,8 +3,22 @@
 {% block extended %}
 <div class="papers-section">
 {% for paper in papers  %}
+
     <div class="papers-tile tile">
+        <div class="d-flex justify-content-between">
+        {% if paper.doi %}
+        <a href="{{ paper.doi }}" target="_blank" class="text-decoration-none">
+        {% endif %}
         <h5>{{ paper.title }}</h5>
+        {% if paper.doi %}
+        </a>
+        {% endif %}
+
+        {% if paper.doi %}
+        <span>    [<a href="{{ paper.pdf }}" target="_blank">PDF</a>]</span>
+        {% endif %}
+
+        </div>
         <div>
             {% set lastAffil = paper.authors[0].affiliation %}
             {% for author in paper.authors  %}
@@ -21,6 +35,7 @@
             <span class="light">({{lastAffil}}) </span>
         </div>
     </div>
+
 {% endfor %}
 </div>
 {% endblock %}

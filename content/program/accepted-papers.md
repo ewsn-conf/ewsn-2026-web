@@ -13,12 +13,16 @@ papers:
         affiliation: "Hong Kong University of Science and Technology (Guangzhou)"
       - name: "Kristofer S. J. Pister"
         affiliation: "University of California, Berkeley"
+    doi: "https://doi.org/10.3217/gmxf-gq81"
+    pdf: "https://ewsn.org/file-repository/ewsn2026/ewsn26-final12.pdf"
   - title: "Decoding LoRa Packets under Collaborative Jamming Attacks"
     authors:
       - name: "Md Ashikul Haque"
         affiliation: "University of Texas at Dallas"
       - name: "Abusayeed Saifullah"
         affiliation: "University of Texas at Dallas"
+    doi: "https://doi.org/10.3217/mb62-wy55"
+    pdf: "https://ewsn.org/file-repository/ewsn2026/ewsn26-final10.pdf"
   - title: "Don’t Pry Into My Personal Space: Exploiting mmWave Sensors to Provide
       Privacy for Areas With Glass Walls"
     authors:
@@ -28,6 +32,8 @@ papers:
         affiliation: "Delft University of Technology"
       - name: "Marco Zuniga"
         affiliation: "Delft University of Technology"
+    doi: "https://doi.org/10.3217/9vs0-nt86"
+    pdf: "https://ewsn.org/file-repository/ewsn2026/ewsn26may-final61.pdf"
   - title: "FLock: Enabling Self-Localisation of Embedded Devices in Mobile and Multi-Hop
       UWB Systems"
     authors:
@@ -41,6 +47,8 @@ papers:
         affiliation: "Graz University of Technology"
       - name: "Carlo Alberto Boano"
         affiliation: "Graz University of Technology"
+    doi: "https://doi.org/10.3217/cs1f-2y69"
+    pdf: "https://ewsn.org/file-repository/ewsn2026/ewsn26may-final43.pdf"
   - title: "Formal Verification and Security Analysis of the MQTT Communication Protocol
       Standard Specification via UPPAAL-SMC"
     authors:
@@ -51,12 +59,16 @@ papers:
       - name: "Olfa Mosbahi"
         affiliation: "National Institute of Applied Sciences and Technology (INSAT),
           University of Carthage"
+    doi: "https://doi.org/10.3217/kqzw-d150"
+    pdf: "https://ewsn.org/file-repository/ewsn2026/ewsn26may-final68.pdf"
   - title: "Isle: Network-level Isolation for Low-power Embedded Applications"
     authors:
       - name: "Marshall Clyburn"
         affiliation: "University of Virginia"
       - name: "Brad Campbell"
         affiliation: "University of Virginia"
+    doi: "https://doi.org/10.3217/k211-ng41"
+    pdf: "https://ewsn.org/file-repository/ewsn2026/ewsn26-final24.pdf"
   - title: "LLM-Assisted Parameter Optimization for Low-Power Wireless Protocols"
     authors:
       - name: "Mohamed Hassaan Mohamed Hydher"
@@ -69,6 +81,8 @@ papers:
         affiliation: "Graz University of Technology"
       - name: "Carlo Alberto Boano"
         affiliation: "Graz University of Technology"
+    doi: "https://doi.org/10.3217/f19q-hk91"
+    pdf: "https://ewsn.org/file-repository/ewsn2026/ewsn26-final36.pdf"
   - title: "LLMOffload: Cooperative Offloading for Efficient On-device LLM Reasoning"
     authors:
       - name: "Reo Kuchida"
@@ -83,6 +97,8 @@ papers:
         affiliation: "University of Tartu, Estonia"
       - name: "Huber Flores"
         affiliation: "University of Tartu, Estonia"
+    doi: "https://doi.org/10.3217/sr77-mw63"
+    pdf: "https://ewsn.org/file-repository/ewsn2026/ewsn26may-final53.pdf"
   - title: "Orientation Matters: An Empirical Study on Ranging Performance of Bluetooth
       6.0 Channel Sounding"
     authors:
@@ -96,6 +112,8 @@ papers:
         affiliation: "TU Graz"
       - name: "Kay Römer"
         affiliation: "TU Graz"
+    doi: "https://doi.org/10.3217/wr14-7m60"
+    pdf: "https://ewsn.org/file-repository/ewsn2026/ewsn26-final31.pdf"
   - title: "SOLO: A Self-Supervised Continual Representation Learning Approach for
       Wearable Human Activity Recognition"
     authors:
@@ -107,6 +125,8 @@ papers:
         affiliation: "Uppsala University, RISE Research Institutes of Sweden"
       - name: "Fatemeh Rahimian"
         affiliation: "RISE Research Institutes of Sweden"
+    doi: "https://doi.org/10.3217/v4dk-5242"
+    pdf: "https://ewsn.org/file-repository/ewsn2026/ewsn26may-final22.pdf"
   - title: "TIMAEUS: Time Synchronization and Multi-hop Communication in Batteryless
       Sensor Networks with Wake-up Receivers"
     authors:
@@ -116,6 +136,8 @@ papers:
         affiliation: "University of Duisburg-Essen"
       - name: "Matteo Zella"
         affiliation: "Niederrhein University of Applied Sciences"
+    doi: "https://doi.org/10.3217/av8f-4h52"
+    pdf: "https://ewsn.org/file-repository/ewsn2026/ewsn26may-final17.pdf"
   - title: "TUF: Time-bounded Fault Tolerance for Nano-satellites"
     authors:
       - name: "Ahmed El Yaacoub"
@@ -130,6 +152,8 @@ papers:
         affiliation: "Uppsala University"
       - name: "Bart Royeaerd"
         affiliation: "Uppsala University"
+    doi: "https://doi.org/10.3217/k6jc-bq44"
+    pdf: "https://ewsn.org/file-repository/ewsn2026/ewsn26-final21.pdf"
   - title: "UlSWaP Bench: A Benchmark Suite for Ultra-Low Size, Weight and Power Devices"
     authors:
       - name: "Daniel Chiba"
@@ -140,6 +164,8 @@ papers:
         affiliation: "Karlsruhe Institute of Technology"
       - name: "Matthew Hicks"
         affiliation: "Virginia Tech"
+    doi: "https://doi.org/10.3217/9h3a-2j82"
+    pdf: "https://ewsn.org/file-repository/ewsn2026/ewsn26may-final26.pdf"
   - title: "WiNeRF: Measurement Constrained Radiance Fields for Actionable Wireless
       Channel Modeling"
     authors:
@@ -155,6 +181,8 @@ papers:
         affiliation: "Intel Labs"
       - name: "Elahe Soltanaghai"
         affiliation: "University of Illinois Urbana-Champaign"
+    doi: "https://doi.org/10.3217/ck00-mq70"
+    pdf: "https://ewsn.org/file-repository/ewsn2026/ewsn26-final38.pdf"
   - title: "WiP Paper: Autonomous Embedded Intelligence for Underground Exploration
       under Intermittent Connectivity"
     authors:
@@ -168,6 +196,8 @@ papers:
         affiliation: "Instituto Politécnico Nacional-UPIITA"
       - name: "Yesenia Cruz-Dominguez"
         affiliation: "Instituto Politécnico Nacional-UPIITA"
+    doi: "https://doi.org/10.3217/nkx8-t275"
+    pdf: "https://ewsn.org/file-repository/ewsn2026/ewsn26-final4.pdf"
   - title: "WiP Paper: Decentralised TinyML-Based Ransomware Containment for Resource-Constrained
       IIoT Networks"
     authors:
@@ -185,6 +215,8 @@ papers:
         affiliation: "University of Bristol"
       - name: "George Oikonomou"
         affiliation: "University of Bristol"
+    doi: "https://doi.org/10.3217/n14h-pd76"
+    pdf: "https://ewsn.org/file-repository/ewsn2026/ewsn26may-final57.pdf"
   - title: "WiP Paper: Towards Real-Time Detection of Close Overtakes for Cyclists
       Using Embedded Intelligence"
     authors:
@@ -194,6 +226,8 @@ papers:
         affiliation: "re:edu GmbH & Co. KG"
       - name: "Thomas Bartoschek"
         affiliation: "University of Münster"
+    doi: "https://doi.org/10.3217/pbt5-4m85"
+    pdf: "https://ewsn.org/file-repository/ewsn2026/ewsn26may-final56.pdf"
   - title: "WiP Paper: 𝑒ODL: Energy-Aware On-Device Training on Microcontrollers"
     authors:
       - name: "Hao Liu"
@@ -202,6 +236,8 @@ papers:
         affiliation: "Delft University of Technology"
       - name: "Marco Zuniga"
         affiliation: "Delft University of Technology"
+    doi: "https://doi.org/10.3217/j1ep-fx24"
+    pdf: "https://ewsn.org/file-repository/ewsn2026/ewsn26may-final19.pdf"
   - title: "Yield over Energy: Task-based Intermittent Computing with Themis"
     authors:
       - name: "Matteo Visotto"
@@ -213,6 +249,8 @@ papers:
       - name: "Luca Mottola"
         affiliation: "Politecnico di Milano, RI.SE Computer Science (Sweden), Uppsala
           University (Sweden)"
+    doi: "https://doi.org/10.3217/77j9-9a89"
+    pdf: "https://ewsn.org/file-repository/ewsn2026/ewsn26may-final12.pdf"
 image: "dresden-Residenzschloss.jpg"
 photoCredits: "Frank Exß (DML-BY) "
 ---
