@@ -63,15 +63,7 @@
                                 <a href="{{ slot.doi }}" class="text-decoration-none" target="_blank">
                                 {% endif %}
 
-                                    {% if slot.type == "workshop"%}
-                                    {% set slotTitle = "Workshop " + slot.title %}
-                                    {% elseif slot.type == "tutorial"%}
-                                    {% set slotTitle = "Tutorial " + slot.title %}
-                                    {% else %}
-                                    {% set slotTitle = slot.title %}
-                                    {% endif %}
-
-                                    <span>{{ slotTitle }}</span>
+                                    <span>{{ slot.title }}</span>
 
                                     {% if slot.pdf %}
                                     [<a href="{{ slot.pdf }}" target="_blank">PDF</a>]

@@ -13,25 +13,29 @@
       parallel: True
       type: "workshop"
       slots:
-        - title: "CrystalFreeIoT"
+        - title: "Workshop: CrystalFreeIoT"
+          titleInProgramOverview: "CrystalFreeIoT"
           link: "https://crystalfreeiot2026.github.io/"
           room: APB/E001
           roomLink: "http://navigator.tu-dresden.de/etplan/apb/00/raum/542100.2060?language=en"
           duration: 75.0
           type: "workshop"
-        - title: "NeuroPHY"
+        - title: "Workshop: NeuroPHY"
+          titleInProgramOverview: "NeuroPHY"
           link: "https://ewsn-neurophy.github.io/2026/"
           room: APB/E009
           roomLink: "http://navigator.tu-dresden.de/etplan/apb/00/raum/542100.2140?language=en"
           duration: 75.0
           type: "workshop"
-        - title: "EMERGE"
+        - title: "Workshop: EMERGE"
+          titleInProgramOverview: "EMERGE"
           link: "https://emergeworkshop.github.io/"
           room: APB/1004
           roomLink: "http://navigator.tu-dresden.de/etplan/apb/01/raum/542101.3070?language=en"
           duration: 75.0
           type: "workshop"
-        - title: 'XR Wearables'
+        - title: "Tutorial: \"DNA-based Nanonetworks for the IoBNT\""
+          titleInProgramOverview: "XR Wearables"
           link: "/workshops-tutorials/xr"
           time: "09:15-10:15"
           room: APB/E008
@@ -49,25 +53,29 @@
       type: "workshop"
       parallel: True
       slots:
-        - title: "CrystalFreeIoT"
+        - title: "Workshop: CrystalFreeIoT"
+          titleInProgramOverview: "CrystalFreeIoT"
           link: "https://crystalfreeiot2026.github.io/"
           room: APB/E001
           roomLink: "http://navigator.tu-dresden.de/etplan/apb/00/raum/542100.2060?language=en"
           duration: 90.0
           type: "workshop"
-        - title: "NeuroPHY"
+        - title: "Workshop: NeuroPHY"
+          titleInProgramOverview: "NeuroPHY"
           link: "https://ewsn-neurophy.github.io/2026/"
           room: APB/E009
           roomLink: "http://navigator.tu-dresden.de/etplan/apb/00/raum/542100.2140?language=en"
           duration: 90.0
           type: "workshop"
-        - title: "EMERGE"
+        - title: "Workshop: EMERGE"
+          titleInProgramOverview: "EMERGE"
           link: "https://emergeworkshop.github.io/"
           room: APB/1004
           roomLink: "http://navigator.tu-dresden.de/etplan/apb/01/raum/542101.3070?language=en"
           duration: 90.0
           type: "workshop"
-        - title: 'XR Wearables'
+        - title: "Tutorial: \"DNA-based Nanonetworks for the IoBNT\""
+          titleInProgramOverview: "XR Wearables"
           link: "/workshops-tutorials/xr"
           room: APB/E008
           roomLink: "http://navigator.tu-dresden.de/etplan/apb/00/raum/542100.2130?language=en"
@@ -84,20 +92,23 @@
       type: "workshop"
       parallel: True
       slots:
-        - title: "CrystalFreeIoT"
+        - title: "Workshop: CrystalFreeIoT"
+          titleInProgramOverview: "CrystalFreeIoT"
           link: "https://crystalfreeiot2026.github.io/"
           room: APB/E001
           roomLink: "http://navigator.tu-dresden.de/etplan/apb/00/raum/542100.2060?language=en"
           duration: 100.0
           type: "workshop"
           time: "13:30-15:10"
-        - title: "NeuroPHY"
+        - title: "Workshop: NeuroPHY"
+          titleInProgramOverview: "NeuroPHY"
           link: "https://ewsn-neurophy.github.io/2026/"
           room: APB/E009
           roomLink: "http://navigator.tu-dresden.de/etplan/apb/00/raum/542100.2140?language=en"
           duration: 90.0
           type: "workshop"
-        - title: 'IoBNT'
+        - title: "Tutorial: \"DNA-based Nanonetworks for the IoBNT\""
+          titleInProgramOverview: "IoBNT"
           link: "/workshops-tutorials/iobnt"
           room: APB/E010
           roomLink: "http://navigator.tu-dresden.de/etplan/apb/00/raum/542100.2150?language=en"
@@ -119,7 +130,8 @@
       type: "workshop"
       parallel: True
       slots:
-        - title: "CrystalFreeIoT"
+        - title: "Workshop: CrystalFreeIoT"
+          titleInProgramOverview: "CrystalFreeIoT"
           link: "https://crystalfreeiot2026.github.io/"
           room: APB/E001
           roomLink: "http://navigator.tu-dresden.de/etplan/apb/00/raum/542100.2060?language=en"
@@ -127,7 +139,8 @@
           duration: 140.0
           type: "workshop"
           time: "15:40-18:00"
-        - title: 'IoBNT'
+        - title: "Tutorial: \"DNA-based Nanonetworks for the IoBNT\""
+          titleInProgramOverview: "IoBNT"
           link: "/workshops-tutorials/iobnt"
           room: APB/E010
           roomLink: "http://navigator.tu-dresden.de/etplan/apb/00/raum/542100.2150?language=en"
@@ -163,16 +176,16 @@
       type: "registration"
     - time: "09:00–09:15"
       title: "Welcome and opening"
-      hideInOverview: true # Included in with following item
+      hideInProgramOverview: true # Included in with following item
       duration: 15.0
     - time: "09:15–10:15"
       title: "Keynote 1"
-      titleInOverview: "Welcome, Opening, and Keynote 1"
+      titleInProgramOverview: "Welcome and opening & Keynote 1"
       slots:
         - title: "Wireless Sensing: From Localization to Coherent Imaging (Joerg Widmer)"
           link: "/program/keynotes"
       duration: 60.0
-      durationInOverview: "75.0" # merge with previous
+      durationInProgramOverview: "75.0" # merge with previous
       type: "keynote"
     - time: "10:15–10:45"
       title: "Coffee break"
@@ -207,16 +220,16 @@
       duration: 20.0
     - time: "15:20–15:35"
       title: "Poster and demo lightning pitches"
-      hideInOverview: true # merge with next Item
+      hideInProgramOverview: true # merge with next Item
       duration: 15.0
     - time: "15:35–17:35"
       title: "Poster and demo session"
-      titleInOverview: "Poster and demo session (inkl. pitches)"
+      titleInProgramOverview: "Poster and demo session (inkl. pitches)"
       slots:
         - title: "See list of accepted posters and demos."
           link: "/program/accepted-posters-demos/"
       duration: 120.0
-      durationInOverview: 135.0
+      durationInProgramOverview: 135.0
       type: "session"
     - time: "17:35–18:30"
       title: "Break / transfer"
@@ -224,12 +237,14 @@
       type: "break"
     - time: "18:30 onward"
       title: "Conference dinner"
-      titleInOverview: "Conference dinner, honorary dinner speech, awards announcement"
+      titleInProgramOverview: "Conference dinner, honorary dinner speech, awards announcement"
       slots:
         - title: "Honorary Dinner Speech (Adam Wolisz)"
           link: "/program/keynotes"
         - title: "Awards announcement"
           link: "/awards"
+      room: "Lingnerschloss"
+      roomLink: "https://maps.app.goo.gl/MAhZj8cHjwaTwzEL8"
       duration: 0
       type: "social"
 - date: "Friday, September 18"

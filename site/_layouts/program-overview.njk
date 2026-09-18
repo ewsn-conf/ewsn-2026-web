@@ -45,16 +45,16 @@
                         <p>{{ day.date}}</p>
                     </div>
                     {% for session in day.sessions %}
-                    {% if not session.hideInOverview%}
+                    {% if not session.hideInProgramOverview%}
 
-                        {% if session.durationInOverview %}
-                        {% set duration = session.durationInOverview * 0.05 %}
+                        {% if session.durationInProgramOverview %}
+                        {% set duration = session.durationInProgramOverview * 0.05 %}
                         {% else %}
                         {% set duration = session.duration * 0.05 %}
                         {% endif %}
 
-                        {% if session.titleInOverview %}
-                        {% set sessionTitle = session.titleInOverview %}
+                        {% if session.titleInProgramOverview %}
+                        {% set sessionTitle = session.titleInProgramOverview %}
                         {% else %}
                         {% set sessionTitle = session.title %}
                         {% endif%}
@@ -76,8 +76,8 @@
                                         {% set time = session.time %}
                                         {% endif %}
 
-                                        {% if slot.titleInOverview %}
-                                        {% set slotTitle = slot.titleInOverview %}
+                                        {% if slot.titleInProgramOverview %}
+                                        {% set slotTitle = slot.titleInProgramOverview %}
                                         {% else %}
                                         {% set slotTitle = slot.title %}
                                         {% endif%}
