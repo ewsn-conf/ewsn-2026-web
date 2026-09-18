@@ -2,8 +2,13 @@
 
 {% block extended %}
 <div class="papers-section">
-{% for paper in papers  %}
+{% if list == "papers" %}
+{% set l = papers %}
+{% elseif list == "posters-demos"%}
+{% set l = postersDemos %}
+{% endif %}
 
+{% for paper in l  %}
     <div class="papers-tile tile">
         <div class="d-flex justify-content-between">
         {% if paper.doi %}
@@ -14,8 +19,8 @@
         </a>
         {% endif %}
 
-        {% if paper.doi %}
-        <span>    [<a href="{{ paper.pdf }}" target="_blank">PDF</a>]</span>
+        {% if paper.pdf %}
+        <span> [<a href="{{ paper.pdf }}" target="_blank">PDF</a>]</span>
         {% endif %}
 
         </div>

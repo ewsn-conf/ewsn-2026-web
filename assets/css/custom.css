@@ -781,11 +781,6 @@ section {
     white-space: nowrap;
   }
 }
-@media screen and (min-width: 576px) {
-  .papers-section span {
-    white-space: nowrap;
-  }
-}
 
 /*---------------------------------------
   Program  Details Section
@@ -981,6 +976,29 @@ section {
 .images-section button:hover {
   background-color: transparent;
 }
+
+/*---------------------------------------
+  Awards Page
+-----------------------------------------*/
+
+.award-icon-gold {
+  color: gold !important;
+}
+
+.award-icon-silver {
+  color: silver !important;
+}
+
+.award-icon-small {
+  font-size: 1.5em;
+}
+
+@media screen and (min-width: 576px) {
+  .awards-section span {
+    white-space: nowrap;
+  }
+}
+
 
 /*---------------------------------------
   Site Footer

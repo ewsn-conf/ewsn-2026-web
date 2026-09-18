@@ -44,8 +44,21 @@
                     <div class="header">
                         <p>{{ day.date}}</p>
                     </div>
-                    {% for session in day.sessions  %}
+                    {% for session in day.sessions %}
+                    {% if not session.hideInOverview%}
+
+                        {% if session.durationInOverview %}
+                        {% set duration = session.durationInOverview * 0.05 %}
+                        {% else %}
                         {% set duration = session.duration * 0.05 %}
+                        {% endif %}
+
+                        {% if session.titleInOverview %}
+                        {% set sessionTitle = session.titleInOverview %}
+                        {% else %}
+                        {% set sessionTitle = session.title %}
+                        {% endif%}
+
                         {% if duration > 0 %}
                             {% if session.parallel %}
                             <div class="session type-{{session.type}} text-center dur-{{duration}}" style="height: {{duration}}em">
@@ -63,9 +76,15 @@
                                         {% set time = session.time %}
                                         {% endif %}
 
+                                        {% if slot.titleInOverview %}
+                                        {% set slotTitle = slot.titleInOverview %}
+                                        {% else %}
+                                        {% set slotTitle = slot.title %}
+                                        {% endif%}
+
                                         {% set slotDuration = slot.duration * 0.05 %}
                                         <div class="slot-active type-{{slot.type}} dur-{{slotDuration}}" style="height: {{slotDuration}}em" data-toggle="tooltip" data-placement="bottom" title="{{time}}">
-                                            <p>{{ slot.name}}</p>
+                                            <p>{{ slotTitle }}</p>
                                         </div>
                                     </div>
 
@@ -73,14 +92,15 @@
                                     </div>
                             {% else %}
                             <div class="session type-{{session.type}} text-center dur-{{duration}}" style="height: {{duration}}em" data-toggle="tooltip" data-placement="bottom" title="{{session.time}}">
-                                <p>{{ session.name}}</p>
-                                {% endif %}
+                                <p>{{ sessionTitle }}</p>
+                             {% endif %}
                             </div>
                         {% else %}
                             <div class="session type-{{session.type}} text-center flex-grow-1" data-toggle="tooltip" data-placement="bottom" title="{{session.time}}">
-                                <p>{{ session.name}}</p>
+                                <p>{{ sessionTitle }}</p>
                             </div>
                         {% endif %}
+                    {% endif %}
                     {% endfor %}
                 </a>
                 </div>

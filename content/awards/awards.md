@@ -1,6 +1,40 @@
 ---
-layout: default
-permalink: false # hide until ready
----
+layout: awards
+title: "Awards"
+image: "dresden-Semperoper.jpg"
+photoCredits: "Frank Exß (DML-BY)"
+awards:
+  - award: "Best Paper Winner"
+    key: "gmxf-gq81"
+    list: "papers"
+  - award: "Best Paper Runner-up"
+    key: "av8f-4h52"
+    list: "papers"
+  - award: "Best Demo Winner"
+    key: "ydk8-nf41"
+    list: "posters-demos"
+  - award: "Best Demo Runner-up"
+    key: "4t92-dc84"
+  - award: "Best Poster Winner"
+    key: "vhwv-6c69"
+    list: "posters-demos"
+  - award: "Distinguished TPC Members"
+    members:
+      - name: "Bo Wei"
+        affiliation: "Newcastle University"
+      - name: "Carlo Alberto Boano"
+        affiliation: "TU Graz"
+      - name: "Karin Anna Hummel"
+        affiliation: "Johannes Kepler University Linz"
+      - name: "Kay Römer"
+        affiliation: "TU Graz"
+      - name: "Olaf Landsiedel"
+        affiliation: "TU Hamburg"
+      - name: "Rui Tan"
+        affiliation: "Nanyang Technological University"
+      - name: "Sara Khalifa"
+        affiliation: "Queensland University of Technology"
+      - name: "Stefan Fischer"
+        affiliation: "Universität zu Lübeck"
 
-# Awards
+---

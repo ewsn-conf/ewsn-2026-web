@@ -1,0 +1,296 @@
+- date: "Wednesday, September 16"
+  key: "day1"
+  venue: "Andreas-Pfitzmann-Bau"
+  venueLink: "/venue"
+  sessions:
+    - time: "08:30–09:00"
+      title: "Registration"
+      duration: 30.0
+      type: "registration"
+    - time: "09:00–10:15"
+      title: "Tutorials and Workshops"
+      duration: 75.0
+      parallel: True
+      type: "workshop"
+      slots:
+        - title: "CrystalFreeIoT"
+          link: "https://crystalfreeiot2026.github.io/"
+          room: APB/E001
+          roomLink: "http://navigator.tu-dresden.de/etplan/apb/00/raum/542100.2060?language=en"
+          duration: 75.0
+          type: "workshop"
+        - title: "NeuroPHY"
+          link: "https://ewsn-neurophy.github.io/2026/"
+          room: APB/E009
+          roomLink: "http://navigator.tu-dresden.de/etplan/apb/00/raum/542100.2140?language=en"
+          duration: 75.0
+          type: "workshop"
+        - title: "EMERGE"
+          link: "https://emergeworkshop.github.io/"
+          room: APB/1004
+          roomLink: "http://navigator.tu-dresden.de/etplan/apb/01/raum/542101.3070?language=en"
+          duration: 75.0
+          type: "workshop"
+        - title: 'XR Wearables'
+          link: "/workshops-tutorials/xr"
+          time: "09:15-10:15"
+          room: APB/E008
+          roomLink: "http://navigator.tu-dresden.de/etplan/apb/00/raum/542100.2130?language=en"
+          duration: 60.0
+          offset: 15.0
+          type: "tutorial"
+    - time: "10:15–10:45"
+      title: "Coffee break"
+      duration: 30.0
+      type: "break"
+    - time: "10:45–12:15"
+      title: "Tutorials and Workshops"
+      duration: 90.0
+      type: "workshop"
+      parallel: True
+      slots:
+        - title: "CrystalFreeIoT"
+          link: "https://crystalfreeiot2026.github.io/"
+          room: APB/E001
+          roomLink: "http://navigator.tu-dresden.de/etplan/apb/00/raum/542100.2060?language=en"
+          duration: 90.0
+          type: "workshop"
+        - title: "NeuroPHY"
+          link: "https://ewsn-neurophy.github.io/2026/"
+          room: APB/E009
+          roomLink: "http://navigator.tu-dresden.de/etplan/apb/00/raum/542100.2140?language=en"
+          duration: 90.0
+          type: "workshop"
+        - title: "EMERGE"
+          link: "https://emergeworkshop.github.io/"
+          room: APB/1004
+          roomLink: "http://navigator.tu-dresden.de/etplan/apb/01/raum/542101.3070?language=en"
+          duration: 90.0
+          type: "workshop"
+        - title: 'XR Wearables'
+          link: "/workshops-tutorials/xr"
+          room: APB/E008
+          roomLink: "http://navigator.tu-dresden.de/etplan/apb/00/raum/542100.2130?language=en"
+          time: "10:45-11:45"
+          duration: 60.0
+          type: "tutorial"
+    - time: "12:15–13:30"
+      title: "Lunch"
+      duration: 75.0
+      type: "break"
+    - time: "13:30–15:00"
+      title: "Community Event, Tutorials, and Workshops"
+      duration: 90.0
+      type: "workshop"
+      parallel: True
+      slots:
+        - title: "CrystalFreeIoT"
+          link: "https://crystalfreeiot2026.github.io/"
+          room: APB/E001
+          roomLink: "http://navigator.tu-dresden.de/etplan/apb/00/raum/542100.2060?language=en"
+          duration: 100.0
+          type: "workshop"
+          time: "13:30-15:10"
+        - title: "NeuroPHY"
+          link: "https://ewsn-neurophy.github.io/2026/"
+          room: APB/E009
+          roomLink: "http://navigator.tu-dresden.de/etplan/apb/00/raum/542100.2140?language=en"
+          duration: 90.0
+          type: "workshop"
+        - title: 'IoBNT'
+          link: "/workshops-tutorials/iobnt"
+          room: APB/E010
+          roomLink: "http://navigator.tu-dresden.de/etplan/apb/00/raum/542100.2150?language=en"
+          duration: 90.0
+          type: "tutorial"
+        - title: "Community Event"
+          link: "/calls/community-event/"
+          room: APB/E023
+          roomLink: "https://navigator.tu-dresden.de/etplan/apb/00/raum/542100.2310?language=en"
+          duration: 90.0
+          type: "social"
+    - time: "15:00–15:30"
+      title: "Coffee break"
+      duration: 30.0
+      type: "break"
+    - time: "15:30–17:30"
+      title: "Community Event, Tutorials, and Workshops"
+      duration: 120.0
+      type: "workshop"
+      parallel: True
+      slots:
+        - title: "CrystalFreeIoT"
+          link: "https://crystalfreeiot2026.github.io/"
+          room: APB/E001
+          roomLink: "http://navigator.tu-dresden.de/etplan/apb/00/raum/542100.2060?language=en"
+          offset: 10.0
+          duration: 140.0
+          type: "workshop"
+          time: "15:40-18:00"
+        - title: 'IoBNT'
+          link: "/workshops-tutorials/iobnt"
+          room: APB/E010
+          roomLink: "http://navigator.tu-dresden.de/etplan/apb/00/raum/542100.2150?language=en"
+          duration: 60.0
+          type: "tutorial"
+          time: "15:30-16:30"
+        - title: "Community Event"
+          duration: 120.0
+          link: "/calls/community-event/"
+          room: APB/E023
+          roomLink: "https://navigator.tu-dresden.de/etplan/apb/00/raum/542100.2310?language=en"
+          type: "social"
+    - time: "17:30-18:00"
+      title: "Break"
+      duration: 30.0
+      type: "break"
+    - time: "18:00-19:00"
+      title: "Campus tour and networking"
+      duration: 60.0
+      type: "break"
+    - time: "19:00 onward"
+      title: "Welcome Reception"
+      duration: 0
+      type: "social"
+- date: "Thursday, September 17"
+  key: "day2"
+  venue: "Dülfer Hall"
+  venueLink: "/venue"
+  sessions:
+    - time: "08:30–09:00"
+      title: "Registration"
+      duration: 30.0
+      type: "registration"
+    - time: "09:00–09:15"
+      title: "Welcome and opening"
+      hideInOverview: true # Included in with following item
+      duration: 15.0
+    - time: "09:15–10:15"
+      title: "Keynote 1"
+      titleInOverview: "Welcome, Opening, and Keynote 1"
+      slots:
+        - title: "Wireless Sensing: From Localization to Coherent Imaging (Joerg Widmer)"
+          link: "/program/keynotes"
+      duration: 60.0
+      durationInOverview: "75.0" # merge with previous
+      type: "keynote"
+    - time: "10:15–10:45"
+      title: "Coffee break"
+      duration: 30.0
+      type: "break"
+    - time: "10:45–12:15"
+      title: "Session 1 — Wireless Sensing, Localization and Channel Modeling"
+      chair: "Stefan Fischer, Universität zu Lübeck, Germany"
+      slots:
+        - key: "9vs0-nt86"
+        - key: "cs1f-2y69"
+        - key: "wr14-7m60"
+        - key: "ck00-mq70"
+      duration: 90.0
+      type: "session"
+    - time: "12:15–13:30"
+      title: "Lunch"
+      duration: 75.0
+      type: "break"
+    - time: "13:30–15:00"
+      title: "Session 2 — Batteryless, Intermittent and Low-Power Networking"
+      chair: "Anca Hangan, Technical University of Cluj-Napoca, Romania"
+      slots:
+        - key: "gmxf-gq81"
+        - key: "av8f-4h52"
+        - key: "77j9-9a89"
+        - key: "3770918"
+      duration: 90.0
+      type: "session"
+    - time: "15:00–15:20"
+      title: "Coffee break and poster/demo setup"
+      duration: 20.0
+    - time: "15:20–15:35"
+      title: "Poster and demo lightning pitches"
+      hideInOverview: true # merge with next Item
+      duration: 15.0
+    - time: "15:35–17:35"
+      title: "Poster and demo session"
+      titleInOverview: "Poster and demo session (inkl. pitches)"
+      slots:
+        - title: "See list of accepted posters and demos."
+          link: "/program/accepted-posters-demos/"
+      duration: 120.0
+      durationInOverview: 135.0
+      type: "session"
+    - time: "17:35–18:30"
+      title: "Break / transfer"
+      duration: 55.0
+      type: "break"
+    - time: "18:30 onward"
+      title: "Conference dinner"
+      titleInOverview: "Conference dinner, honorary dinner speech, awards announcement"
+      slots:
+        - title: "Honorary Dinner Speech (Adam Wolisz)"
+          link: "/program/keynotes"
+        - title: "Awards announcement"
+          link: "/awards"
+      duration: 0
+      type: "social"
+- date: "Friday, September 18"
+  key: "day3"
+  venue: "Dülfer Hall"
+  venueLink: "/venue"
+  sessions:
+    - time: "08:30–09:00"
+      title: "Registration"
+      duration: 30.0
+      type: "registration"
+    - time: "09:00–10:00"
+      title: "Keynote 2"
+      slots:
+        - title: "From Resource-constrained to Resource-unstable Intelligence (Luca Mottola)"
+          link: "/program/keynotes"
+      duration: 60.0
+      type: "keynote"
+    - time: "10:00–10:30"
+      title: "Coffee break"
+      duration: 30.0
+      type: "break"
+    - time: "10:30–12:00"
+      title: "Session 3 — Security, Isolation and Resilient Systems"
+      chair: "Carlo Alberto Boano, TU Graz, Austria"
+      slots:
+        - key: "kqzw-d150"
+        - key: "k211-ng41"
+        - key: "mb62-wy55"
+        - key: "k6jc-bq44"
+      duration: 90.0
+      type: "session"
+    - time: "12:00–13:15"
+      title: "Lunch"
+      duration: 75.0
+      type: "break"
+    - time: "13:15–14:45"
+      title: "Session 4 — Embedded AI and Ultra-Constrained Computing"
+      chair: "Brad Campbell, University of Virginia, USA"
+      slots:
+        - key: "9h3a-2j82"
+        - key: "v4dk-5242"
+        - key: "sr77-mw63"
+        - key: "f19q-hk91"
+      duration: 90.0
+      type: "session"
+    - time: "14:45–15:15"
+      title: "Coffee break"
+      duration: 30.0
+      type: "break"
+    - time: "15:15–16:15"
+      title: "Session 5 — Work in Progress: Embedded Intelligence in the Field"
+      chair: "Huber Flores, University of Tartu, Estonia"
+      slots:
+        - key: "nkx8-t275"
+        - key: "pbt5-4m85"
+        - key: "j1ep-fx24"
+        - key: "n14h-pd76"
+      duration: 60.0
+      type: "session"
+    - time: "16:15–16:45"
+      title: "Closing and farewell"
+      duration: 30.0
+      type: "opening"

@@ -8,7 +8,7 @@
             <div class="date d-flex flex-row align-items-center justify-content-between">
                 <p class="flex-grow ms-3">{{ day.date }}</p>
                 {% if day.venue %}
-                <a href="/venue" class="me-3" target="_blank">{{day.venue}}</a>
+                <a href="{{day.venueLink}}" class="me-3" target="_blank">{{day.venue}}</a>
                 {% endif %}
             </div>
             <div>
@@ -22,7 +22,7 @@
                             <a href="{{ session.link }}">
                             {% endif %}
 
-                            <b>{{ session.name}}</b>
+                            <b>{{ session.title}}</b>
 
                             {% if session.chair %}
                             </br><span class="light">Chair: {{ session.chair }}</span>
@@ -37,9 +37,23 @@
                             <ul class="slots">
                             {% for slot in session.slots  %}
 
+                            {% if slot.key %}
+                            {% set slot = papers | findByKey(slot.key)%}
+                            {% endif %}
+
                                 <li>
                                 <div class="row">
                                 <div class="col">
+                                {% if slot.award == "winner" %}
+                                <a href="/awards">
+                                <i class="bi bi-award award-icon-gold me-1"></i>
+                                </a>
+                                {% endif %}
+                                {% if slot.award == "runner-up" %}
+                                <a href="/awards">
+                                <i class="bi bi-award award-icon-silver me-1"></i>
+                                </a>
+                                {% endif %}
 
                                 {% if slot.link %}
                                 <a href="{{ slot.link }}">
@@ -49,7 +63,16 @@
                                 <a href="{{ slot.doi }}" class="text-decoration-none" target="_blank">
                                 {% endif %}
 
-                                    <span>{{ slot.name }}</span>
+                                    {% if slot.type == "workshop"%}
+                                    {% set slotTitle = "Workshop " + slot.title %}
+                                    {% elseif slot.type == "tutorial"%}
+                                    {% set slotTitle = "Tutorial " + slot.title %}
+                                    {% else %}
+                                    {% set slotTitle = slot.title %}
+                                    {% endif %}
+
+                                    <span>{{ slotTitle }}</span>
+
                                     {% if slot.pdf %}
                                     [<a href="{{ slot.pdf }}" target="_blank">PDF</a>]
                                     {% endif %}
