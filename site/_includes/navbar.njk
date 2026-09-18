@@ -42,12 +42,16 @@
                                     {% for child in children  %}
                                         {% if child.isExternal %}
                                             {% set childPath = child.path %}
+                                            {% set target = "_blank"%}
                                         {% elseif child.path == item.path %}
                                             {% set childPath = "/" + item.path %}
+                                            {% set target = "_self"%}
                                         {% else %}
                                             {% set childPath = "/" + item.path + "/" + child.path %}
+                                            {% set target = "_self"%}
                                         {% endif %}
-                                        <a class="dropdown-item" href="{{ childPath }}">{{ child.title  }}
+
+                                        <a class="dropdown-item" href="{{ childPath }}" target="{{target}}">{{ child.title  }}
                                             {% if child.isExternal %}
                                             <i class="bi-arrow-up-right ms-1"></i>
                                             {% endif %}
@@ -71,7 +75,13 @@
                                     {% set path = "/" + path %}
                                 {% endif %}
 
-                                <a class="nav-link nav-text" href="{{ path }}">{{ item.title }}
+                                {% if isExternal %}
+                                {% set target = "_blank"%}
+                                {% else %}
+                                {% set target = "_self"%}
+                                {% endif %}
+
+                                <a class="nav-link nav-text" href="{{ path }}" target="{{target}}">{{ item.title }}
                                     {% if isExternal %}
                                     <i class="bi-arrow-up-right ms-1"></i>
                                     {% endif %}

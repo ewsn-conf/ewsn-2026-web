@@ -37,6 +37,7 @@ https://www.tooplate.com/view/2137-barista-cafe
 body {
   font-family: var(--body-font-family);
   overscroll-behavior: none;
+  print-color-adjust: exact;
 }
 
 body p, body a  {
@@ -121,7 +122,8 @@ a, p, ul li, em, table,
   color: unset;
 }
 
-a:hover {
+a:hover,
+a:focus {
   color: var(--secondary-color) !important;
 }
 
@@ -154,7 +156,7 @@ section {
 }
 
 .text-decoration-none {
-  text-decoration: none;
+  text-decoration: none !important;
 }
 
 .container {
