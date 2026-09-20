@@ -14,6 +14,7 @@
             <div>
                 <ul>
                 {% for session in day.sessions  %}
+                {% if not session.hideInProgramDetails %}
                     <div class="session row">
                         <span class="time col-xl-2 col-sm-3 col-12">{{ session.time }}</span>
                         <div class="col">
@@ -36,6 +37,7 @@
                             {% if session.slots %}
                             <ul class="slots">
                             {% for slot in session.slots  %}
+                            {% if not slot.hideInProgramDetails %}
 
                             {% if slot.key %}
                             {% set slot = papers | findByKey(slot.key)%}
@@ -63,7 +65,7 @@
                                 <a href="{{ slot.doi }}" class="text-decoration-none" target="_blank">
                                 {% endif %}
 
-                                    <span>{{ slot.title }}</span>
+                                    <span>{{ slot.title | replace("WiP Paper: ", "")}}</span>
 
                                     {% if slot.pdf %}
                                     [<a href="{{ slot.pdf }}" target="_blank">PDF</a>]
@@ -112,7 +114,7 @@
 
                                 </div>
                                 </li>
-
+                            {% endif %}
                             {% endfor %}
                             </ul>
                             {% endif %}
@@ -124,6 +126,7 @@
                         {% endif %}
 
                     </div>
+                {% endif %}
                 {% endfor %}
                 </ul>
             </div>

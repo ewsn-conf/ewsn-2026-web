@@ -300,5 +300,6 @@
       affiliation: Graz University of Technology
     - name: Carlo Alberto Boano
       affiliation: Graz University of Technology
+  isJournalTrack: true
   key: "3770918"
   doi: "https://doi.org/10.1145/3770918"

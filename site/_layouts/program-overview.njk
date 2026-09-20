@@ -44,26 +44,24 @@
                     <div class="header">
                         <p>{{ day.date}}</p>
                     </div>
+
                     {% for session in day.sessions %}
-                    {% if not session.hideInProgramOverview%}
+                    {% if not session.hideInProgramOverview %}
 
-                        {% if session.durationInProgramOverview %}
-                        {% set duration = session.durationInProgramOverview * 0.05 %}
-                        {% else %}
                         {% set duration = session.duration * 0.05 %}
-                        {% endif %}
 
-                        {% if session.titleInProgramOverview %}
-                        {% set sessionTitle = session.titleInProgramOverview %}
+                        {% if session.shortTitle %}
+                        {% set sessionTitle = session.shortTitle %}
                         {% else %}
                         {% set sessionTitle = session.title %}
                         {% endif%}
 
                         {% if duration > 0 %}
-                            {% if session.parallel %}
+                        {% if session.parallel %}
                             <div class="session type-{{session.type}} text-center dur-{{duration}}" style="height: {{duration}}em">
-                                    <div class="row slots align-items-start">
-                                    {% for slot in session.slots %}
+                                <div class="row slots align-items-start">
+                                {% for slot in session.slots %}
+                                {% if not slot.hideInProgramOverview %}
                                     <div class="slot col">
                                         {% if slot.offset %}
                                         {% set offset = slot.offset * 0.05 %}
@@ -76,8 +74,8 @@
                                         {% set time = session.time %}
                                         {% endif %}
 
-                                        {% if slot.titleInProgramOverview %}
-                                        {% set slotTitle = slot.titleInProgramOverview %}
+                                        {% if slot.shortTitle %}
+                                        {% set slotTitle = slot.shortTitle %}
                                         {% else %}
                                         {% set slotTitle = slot.title %}
                                         {% endif%}
@@ -87,18 +85,18 @@
                                             <p>{{ slotTitle }}</p>
                                         </div>
                                     </div>
-
-                                    {% endfor %}
-                                    </div>
-                            {% else %}
-                            <div class="session type-{{session.type}} text-center dur-{{duration}}" style="height: {{duration}}em" data-toggle="tooltip" data-placement="bottom" title="{{session.time}}">
-                                <p>{{ sessionTitle }}</p>
-                             {% endif %}
+                                {% endif %}
+                                {% endfor %}
                             </div>
                         {% else %}
-                            <div class="session type-{{session.type}} text-center flex-grow-1" data-toggle="tooltip" data-placement="bottom" title="{{session.time}}">
-                                <p>{{ sessionTitle }}</p>
-                            </div>
+                                <div class="session type-{{session.type}} text-center dur-{{duration}}" style="height: {{duration}}em" data-toggle="tooltip" data-placement="bottom" title="{{session.time}}">
+                                    <p>{{ sessionTitle }}</p>
+                             {% endif %}
+                                </div>
+                            {% else %}
+                                <div class="session type-{{session.type}} text-center flex-grow-1" data-toggle="tooltip" data-placement="bottom" title="{{session.time}}">
+                                    <p>{{ sessionTitle }}</p>
+                                </div>
                         {% endif %}
                     {% endif %}
                     {% endfor %}
