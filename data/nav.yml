@@ -16,6 +16,7 @@
   children:
     - path: "registration"
       title: "Registration"
+  hide: true
 - path: "calls"
   title: "Calls"
   children:

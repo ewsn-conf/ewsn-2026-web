@@ -15,6 +15,7 @@ awards:
     list: "posters-demos"
   - award: "Best Demo Runner-up"
     key: "4t92-dc84"
+    list: "posters-demos"
   - award: "Best Poster Winner"
     key: "vhwv-6c69"
     list: "posters-demos"
